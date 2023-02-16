@@ -14,12 +14,13 @@
 .usercard {
     background-color: rgb(228, 222, 222);
     border: 3px solid rgb(76, 78, 78);
-    width: 50vw;
+    width: 45vw;
     max-height: 250px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 15px 15px 25px 15px;
+    flex-wrap: wrap;
 }
   
 .usercard > img {
@@ -35,21 +36,25 @@
     flex-shrink: 1;
     flex-grow: 1;
     width: 30%;
-    margin-left: 20px;
+    margin-left: 2vw;
     font-weight: 600;
     font-size: 1rem;
     overflow: scroll;
 }
-  
-  
- 
 
 .details > h2 {
-    margin: 0px 0 40px 0;
+    margin: 0px 0 20px 0;
 }
 
 
 /* Media query for smaller screens */
+
+@media screen and (max-width: 900px) {
+    .details{
+        font-size: 0.85rem;
+    }   
+}
+
 @media only screen and (max-width: 768px) {
     .details {
         font-size: 0.8rem;
@@ -68,6 +73,10 @@
 
     .details {
         width: 100%;
+    }
+
+    .details > h2 {
+        margin: 10px 0 10px 0;
     }
 
     .cardContainer{
